@@ -12,6 +12,8 @@ import com.jakewharton.diffuse.report.toSummaryString
 internal class ApkDiffTextReport(private val apkDiff: ApkDiff) : DiffReport {
   override fun write(appendable: Appendable) {
     appendable.apply {
+      appendln("Diffuse - Tinder Edition")
+      appendln()
       append("OLD: ")
       append(apkDiff.oldApk.filename)
       append(" (signature: ")
@@ -70,13 +72,6 @@ internal class ApkDiffTextReport(private val apkDiff: ApkDiff) : DiffReport {
         appendln("====   MANIFEST   ====")
         appendln("======================")
         appendln(apkDiff.manifest.toDetailReport())
-      }
-      if (apkDiff.dex.changed) {
-        appendln()
-        appendln("=================")
-        appendln("====   DEX   ====")
-        appendln("=================")
-        appendln(apkDiff.dex.toDetailReport())
       }
       if (apkDiff.arsc.changed) {
         appendln()
