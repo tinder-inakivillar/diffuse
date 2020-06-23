@@ -122,8 +122,8 @@ internal fun DexDiff.toSummaryTable() = diffuseTable {
 }.renderText()
 
 internal fun DexDiff.toDetailReport() = buildString {
-  appendComponentDiff("STRINGS", strings)
+  //appendComponentDiff("STRINGS", strings)
   appendComponentDiff("TYPES", types)
-  appendComponentDiff("METHODS", methods)
-  appendComponentDiff("FIELDS", fields)
+  //appendComponentDiff("METHODS", methods)
+  //appendComponentDiff("FIELDS", fields)
 }
