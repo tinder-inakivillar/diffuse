@@ -12,7 +12,7 @@ import com.jakewharton.diffuse.report.toSummaryString
 internal class ApkDiffTextReport(private val apkDiff: ApkDiff) : DiffReport {
   override fun write(appendable: Appendable) {
     appendable.apply {
-      appendln("Diffuse - Tinder Edition version 2")
+      appendln("Diffuse - Tinder Edition")
       appendln()
       append("OLD: ")
       append(apkDiff.oldApk.filename)
